@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MAIN MODEL
 struct MarsRover: Codable {
     let name: String
     let launchDate: Date
@@ -17,6 +18,7 @@ struct MarsRover: Codable {
     let numberOfPhotos: Int
     let solDescriptions: [SolDescription]
     
+    //this is for the operations
 //    enum Status: String, Codable {
 //        case active, complete
 //    }
