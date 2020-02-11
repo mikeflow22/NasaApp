@@ -14,6 +14,7 @@
 		1BCDB72223F2FFD4005FDEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BCDB72123F2FFD4005FDEF6 /* Assets.xcassets */; };
 		1BCDB72523F2FFD4005FDEF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BCDB72323F2FFD4005FDEF6 /* LaunchScreen.storyboard */; };
 		1BCDB72D23F30D75005FDEF6 /* MarsRoverClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */; };
+		1BCDB72F23F319E8005FDEF6 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1BCDB72423F2FFD4005FDEF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BCDB72623F2FFD4005FDEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverClient.swift; sourceTree = "<group>"; };
+		1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1BCDB72323F2FFD4005FDEF6 /* LaunchScreen.storyboard */,
 				1BCDB72623F2FFD4005FDEF6 /* Info.plist */,
 				1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */,
+				1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCDB72D23F30D75005FDEF6 /* MarsRoverClient.swift in Sources */,
+				1BCDB72F23F319E8005FDEF6 /* MarsRover.swift in Sources */,
 				1BCDB71D23F2FFD3005FDEF6 /* ViewController.swift in Sources */,
 				1BCDB71923F2FFD3005FDEF6 /* AppDelegate.swift in Sources */,
 				1BCDB71B23F2FFD3005FDEF6 /* SceneDelegate.swift in Sources */,
