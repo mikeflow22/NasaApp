@@ -16,6 +16,7 @@
 		1BCDB72D23F30D75005FDEF6 /* MarsRoverClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */; };
 		1BCDB72F23F319E8005FDEF6 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */; };
 		1BCDB73623F31B55005FDEF6 /* SolDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB73523F31B55005FDEF6 /* SolDescription.swift */; };
+		1BCDB73823F36E30005FDEF6 /* MarsPhotoReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB73723F36E30005FDEF6 /* MarsPhotoReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverClient.swift; sourceTree = "<group>"; };
 		1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = "<group>"; };
 		1BCDB73523F31B55005FDEF6 /* SolDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolDescription.swift; sourceTree = "<group>"; };
+		1BCDB73723F36E30005FDEF6 /* MarsPhotoReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotoReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		1BCDB73023F31AB7005FDEF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1BCDB73723F36E30005FDEF6 /* MarsPhotoReference.swift */,
 				1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */,
 				1BCDB73523F31B55005FDEF6 /* SolDescription.swift */,
 			);
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCDB72D23F30D75005FDEF6 /* MarsRoverClient.swift in Sources */,
+				1BCDB73823F36E30005FDEF6 /* MarsPhotoReference.swift in Sources */,
 				1BCDB72F23F319E8005FDEF6 /* MarsRover.swift in Sources */,
 				1BCDB71D23F2FFD3005FDEF6 /* ViewController.swift in Sources */,
 				1BCDB71923F2FFD3005FDEF6 /* AppDelegate.swift in Sources */,
@@ -338,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4W7EQ4E4R;
-				INFOPLIST_FILE = NASA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NASA/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4W7EQ4E4R;
-				INFOPLIST_FILE = NASA/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NASA/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
