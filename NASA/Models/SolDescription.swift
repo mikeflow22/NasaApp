@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct SolDescription: Codable {
+    let sol: Int //mars' day number
+    let totalPhotos: Int
+    let cameras: [String] //names of the cameras
+}
+
