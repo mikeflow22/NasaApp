@@ -60,17 +60,57 @@
 		1BCDB71723F2FFD3005FDEF6 /* NASA */ = {
 			isa = PBXGroup;
 			children = (
+				1BCDB73223F31ACB005FDEF6 /* Storyboards */,
+				1BCDB73323F31AD3005FDEF6 /* View Controllers */,
+				1BCDB73123F31AC1005FDEF6 /* Networking */,
+				1BCDB73023F31AB7005FDEF6 /* Models */,
+				1BCDB73423F31AE5005FDEF6 /* Resources */,
+			);
+			path = NASA;
+			sourceTree = "<group>";
+		};
+		1BCDB73023F31AB7005FDEF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BCDB73123F31AC1005FDEF6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1BCDB73223F31ACB005FDEF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1BCDB71E23F2FFD3005FDEF6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1BCDB73323F31AD3005FDEF6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BCDB71C23F2FFD3005FDEF6 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1BCDB73423F31AE5005FDEF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1BCDB71823F2FFD3005FDEF6 /* AppDelegate.swift */,
 				1BCDB71A23F2FFD3005FDEF6 /* SceneDelegate.swift */,
-				1BCDB71C23F2FFD3005FDEF6 /* ViewController.swift */,
-				1BCDB71E23F2FFD3005FDEF6 /* Main.storyboard */,
 				1BCDB72123F2FFD4005FDEF6 /* Assets.xcassets */,
 				1BCDB72323F2FFD4005FDEF6 /* LaunchScreen.storyboard */,
 				1BCDB72623F2FFD4005FDEF6 /* Info.plist */,
-				1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */,
-				1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */,
 			);
-			path = NASA;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
