@@ -20,9 +20,8 @@ class RoverHomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
+    
     //use tags to determine which one was tapped - might have to drag all three to this link
     @IBAction func roverNameButtonTapped(_ sender: UIButton) {
         switch sender.tag {
@@ -47,15 +46,10 @@ class RoverHomePageViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "buttonSegue" {
-            guard let destination = segue.destination as?  PhotosCollectionViewController else {
+            guard let destination = segue.destination as?  PhotosCollectionViewController, let roverName = roverName else {
                 print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
                 return
             }
-            guard let roverName = roverName else {
-                print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
-                return
-            }
-            
             destination.roverName = roverName
         } else {
             print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")

@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        printDate()
         
         POTDController.shared.fetchPOTDImageURL { (url, error) in
             if let error = error {
@@ -41,18 +40,7 @@ class ViewController: UIViewController {
                 }
                 print("image we got back data: \(image.description)")
             }
-        
-        
         }
-        
-//       let network = MarsRoverClient()
-//       network.fetchEarthView(lon: 100.75, lat: 1.5) { (image) in
-//          guard let image = image else {
-//                print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
-//               return
-//            }
-//            print("image we got back: \(image.description)")
-//       }
     }
     
     
@@ -60,15 +48,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func EarthButtonTapped(_ sender: UIButton) {
-    }
-    
-    
-    
-    func printDate(){
-        let date = Date()
-        let formattedDate = date.formatDate()
-        let stringFromDate  = date.turnDateIntoString()
-       print("this is the string from date: \(stringFromDate)")
     }
 }
 

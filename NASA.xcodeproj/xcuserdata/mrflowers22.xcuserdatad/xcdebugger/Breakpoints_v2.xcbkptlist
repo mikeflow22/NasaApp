@@ -7,33 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3A6D0F77-4E73-4D05-8629-3BA5F3CDD15C"
+            uuid = "1181767B-3E5F-41FA-80BE-708B78E6B215"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NASA/View Controllers/ViewController.swift"
+            filePath = "NASA/Networking/MarsRoverClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetch(from:using:completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A84861FA-421A-4E4B-9433-901088489989"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NASA/View Controllers/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1181767B-3E5F-41FA-80BE-708B78E6B215 - 2a6150d3bddfc011"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NASA.MarsRoverClient.(fetch in _EBA4631C7303B29875271B2E9C6E8F5E)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(from: Foundation.URL, using: __C.NSURLSession, completion: (Swift.Optional&lt;A&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NASA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrflowers22/Desktop/treehouse/Unit%2010/NASA/NASA/Networking/MarsRoverClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "1181767B-3E5F-41FA-80BE-708B78E6B215 - 7123835c63229277"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NASA.MarsRoverClient.(fetch in _EBA4631C7303B29875271B2E9C6E8F5E)&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(from: Foundation.URL, using: __C.NSURLSession, completion: (Swift.Optional&lt;A&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NASA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mrflowers22/Desktop/treehouse/Unit%2010/NASA/NASA/Networking/MarsRoverClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "362">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

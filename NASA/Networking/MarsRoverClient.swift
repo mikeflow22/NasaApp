@@ -67,6 +67,7 @@ class MarsRoverClient {
     func fetchMarsRover(named name: String, using session: URLSession = URLSession.shared, completion: @escaping (MarsRover?, Error?) -> Void) {
         
         let url = self.url(forInfoForRover: name)
+        print("fetchMarsRover(named:using:completion) is being executed")
         fetch(from: url, using: session) { (dictionary: [String : MarsRover]?, error: Error?) in
             guard let rover = dictionary?["photo_manifest"] else {
                 print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
@@ -82,6 +83,7 @@ class MarsRoverClient {
         //construct the url
         let url = self.url(forPhotosfromRover: rover.name, on: sol)
         //the dictionary  is string to any but we want our model which is an array of photos
+        print("fetchPhoto() is being executed")
         fetch(from: url, using: session) { (dictionary: [String : [MarsPhotoReference]]?, error: Error?) in
             guard let photos = dictionary?["photos"] else {
                 print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
