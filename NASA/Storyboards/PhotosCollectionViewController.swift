@@ -56,16 +56,6 @@ class PhotosCollectionViewController: UICollectionViewController {
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -84,7 +74,6 @@ class PhotosCollectionViewController: UICollectionViewController {
         
         return cell
     }
-    
     
     // Make collection view cells fill as much available width as possible
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
