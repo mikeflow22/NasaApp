@@ -10,6 +10,9 @@
 		1B4C77EC23F453C400B1A785 /* FetchPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77EB23F453C400B1A785 /* FetchPhotoOperation.swift */; };
 		1B4C77EF23F4546300B1A785 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77EE23F4546300B1A785 /* ConcurrentOperation.swift */; };
 		1B4C77F123F454BD00B1A785 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77F023F454BD00B1A785 /* URL+Extension.swift */; };
+		1B4C77F423F461F100B1A785 /* PictureOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77F323F461F100B1A785 /* PictureOfTheDay.swift */; };
+		1B4C77F623F4623400B1A785 /* POTDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77F523F4623400B1A785 /* POTDController.swift */; };
+		1B4C77F823F46D1900B1A785 /* RoverHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4C77F723F46D1900B1A785 /* RoverHomePageViewController.swift */; };
 		1BCDB71923F2FFD3005FDEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB71823F2FFD3005FDEF6 /* AppDelegate.swift */; };
 		1BCDB71B23F2FFD3005FDEF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB71A23F2FFD3005FDEF6 /* SceneDelegate.swift */; };
 		1BCDB71D23F2FFD3005FDEF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDB71C23F2FFD3005FDEF6 /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 		1B4C77EB23F453C400B1A785 /* FetchPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotoOperation.swift; sourceTree = "<group>"; };
 		1B4C77EE23F4546300B1A785 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
 		1B4C77F023F454BD00B1A785 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		1B4C77F323F461F100B1A785 /* PictureOfTheDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDay.swift; sourceTree = "<group>"; };
+		1B4C77F523F4623400B1A785 /* POTDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POTDController.swift; sourceTree = "<group>"; };
+		1B4C77F723F46D1900B1A785 /* RoverHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverHomePageViewController.swift; sourceTree = "<group>"; };
 		1BCDB71523F2FFD3005FDEF6 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCDB71823F2FFD3005FDEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCDB71A23F2FFD3005FDEF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 				1BCDB73423F31AE5005FDEF6 /* Resources */,
 				1B4C77ED23F4544400B1A785 /* Operations */,
 				1B4C77F223F4550F00B1A785 /* Helper */,
+				1B4C77F323F461F100B1A785 /* PictureOfTheDay.swift */,
+				1B4C77F523F4623400B1A785 /* POTDController.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCDB71C23F2FFD3005FDEF6 /* ViewController.swift */,
+				1B4C77F723F46D1900B1A785 /* RoverHomePageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -216,6 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCDB72D23F30D75005FDEF6 /* MarsRoverClient.swift in Sources */,
+				1B4C77F423F461F100B1A785 /* PictureOfTheDay.swift in Sources */,
+				1B4C77F823F46D1900B1A785 /* RoverHomePageViewController.swift in Sources */,
+				1B4C77F623F4623400B1A785 /* POTDController.swift in Sources */,
 				1B4C77EC23F453C400B1A785 /* FetchPhotoOperation.swift in Sources */,
 				1BCDB73823F36E30005FDEF6 /* MarsPhotoReference.swift in Sources */,
 				1B4C77F123F454BD00B1A785 /* URL+Extension.swift in Sources */,

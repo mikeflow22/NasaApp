@@ -85,16 +85,12 @@ class MarsRoverClient {
     
     func fetchEarthView(lon: Double, lat: Double, completion: @escaping(UIImage?) -> Void){
         let baseURL = URL(string: "https://api.nasa.gov/planetary/earth/imagery")!
-//        let dateFormatter = ISO8601DateFormatter()
-//        dateFormatter.dateFormat = "yyyy-MM-dd"
-//        dateFormatter.formatOptions = .withDashSeparatorInDate
-//        dateFormatter.dateStyle = .short
-//        dateFormatter.timeStyle = .none
        
         let date = Date()
         print(date)
         let formattedDate = date.turnDateIntoString()
      print("this is the date formatted: \(formattedDate)")
+        //the today's date doesn't work, or maybe it does and the  lat long  doesnt work. 
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = [URLQueryItem(name: "lon", value: "\(lon)"),
                                      URLQueryItem(name: "lat", value: "\(lat)"),
@@ -133,5 +129,15 @@ extension Date {
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.timeStyle = .none
         return formatter.string(from: self)
+    }
+}
+
+extension Date {
+func turnDateIntoString() -> String {
+    let dateformatter = DateFormatter()
+    dateformatter.timeStyle = .none
+    dateformatter.dateStyle = .none
+    dateformatter.dateFormat = "yyyy-MM-dd"
+   return dateformatter.string(from: self)
     }
 }
