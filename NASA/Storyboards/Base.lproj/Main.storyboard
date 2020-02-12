@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1610" y="102"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Photos Collection View Controller-->
         <scene sceneID="cbJ-Ie-JSe">
             <objects>
-                <collectionViewController id="54i-VM-n8P" sceneMemberID="viewController">
+                <collectionViewController id="54i-VM-n8P" customClass="PhotosCollectionViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eqZ-B7-iVZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
