@@ -83,4 +83,55 @@ class MarsRoverClient {
         }
     }
     
+    func fetchEarthView(lon: Double, lat: Double, cloudScore: Bool, completion: @escaping(UIImage?) -> Void){
+        let baseURL = URL(string: "https://api.nasa.gov/planetary/earth/imagery")!
+//        let dateFormatter = ISO8601DateFormatter()
+//        dateFormatter.dateFormat = "yyyy-MM-dd"
+//        dateFormatter.formatOptions = .withDashSeparatorInDate
+//        dateFormatter.dateStyle = .short
+//        dateFormatter.timeStyle = .none
+       
+        let date = Date()
+        print(date)
+        let formattedDate = date.formatDate()
+     print("this is the date formatted: \(formattedDate)")
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
+        urlComponents.queryItems = [URLQueryItem(name: "lon", value: "\(lon)"),
+                                     URLQueryItem(name: "lat", value: "\(lat)"),
+                                     URLQueryItem(name: "date", value: "2020-01-01"),
+                                     URLQueryItem(name: "cloud_score", value: "\(cloudScore)"),
+                                     URLQueryItem(name: "api_key", value: apiKey)]
+        
+        let finalURL = urlComponents.url!
+        print("earth view final url:  \(finalURL)")
+        URLSession.shared.dataTask(with: finalURL) { (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                print("Response: \(response.statusCode)")
+            }
+            
+               if let error = error {
+                         print("Error with poster: \(error), READABLE ERROR:::\(error.localizedDescription), \(#function)")
+                         completion(nil)
+                         return
+                     }
+                     
+            
+                     guard let data = data else {
+                         print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
+                         completion(nil)
+                         return
+                     }
+                     
+                     let image = UIImage(data: data)
+                     completion(image)
+        }.resume()
+    }
+}
+extension Date {
+    func formatDate() -> String {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.timeStyle = .none
+        return formatter.string(from: self)
+    }
 }
