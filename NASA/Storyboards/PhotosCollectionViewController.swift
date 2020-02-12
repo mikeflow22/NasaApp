@@ -12,7 +12,11 @@ private let reuseIdentifier = "Cell"
 
 class PhotosCollectionViewController: UICollectionViewController {
     
-    var RoverName: RoverName?
+    var roverName: String? {
+        didSet {
+            print("RoverName that was passed: \(String(describing: roverName))")
+        }
+    }
     private var storedFetchedOperations: [Int : FetchPhotoOperation] = [:]
     
     private let photoFetchQueue = OperationQueue()
@@ -45,13 +49,19 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        client.fetchMarsRover(named: "curiosity") { (rover, error) in
+        unwrapRoverName()
+    }
+    
+    func unwrapRoverName(){
+        guard let roverName = roverName, isViewLoaded else {
+            return
+        }
+        self.title = roverName
+        client.fetchMarsRover(named: roverName) { (rover, error) in
             if let error = error {
-                NSLog("Error fetching info for curiosity: \(error)")
+                NSLog("Error fetching info for rover named: curiosity: \(error)")
                 return
             }
-            
             self.roverInfo = rover
         }
     }
@@ -75,27 +85,28 @@ class PhotosCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    // Make collection view cells fill as much available width as possible
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        var totalUsableWidth = collectionView.frame.width
-        let inset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
-        totalUsableWidth -= inset.left + inset.right
-        
-        let minWidth: CGFloat = 150.0
-        let numberOfItemsInOneRow = Int(totalUsableWidth / minWidth)
-        totalUsableWidth -= CGFloat(numberOfItemsInOneRow - 1) * flowLayout.minimumInteritemSpacing
-        let width = totalUsableWidth / CGFloat(numberOfItemsInOneRow)
-        return CGSize(width: width, height: width)
-    }
     
-    // Add margins to the left and right side
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 10.0, bottom: 0, right: 10.0)
-    }
+    //    // Make collection view cells fill as much available width as possible
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+    //        var totalUsableWidth = collectionView.frame.width
+    //        let inset = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
+    //        totalUsableWidth -= inset.left + inset.right
+    //
+    //        let minWidth: CGFloat = 150.0
+    //        let numberOfItemsInOneRow = Int(totalUsableWidth / minWidth)
+    //        totalUsableWidth -= CGFloat(numberOfItemsInOneRow - 1) * flowLayout.minimumInteritemSpacing
+    //        let width = totalUsableWidth / CGFloat(numberOfItemsInOneRow)
+    //        return CGSize(width: width, height: width)
+    //    }
+    //
+    ////    // Add margins to the left and right side
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    //        return UIEdgeInsets(top: 400, left: 100.0, bottom: 0, right: 10.0)
+    //    }
     
     // this is cancelling fetching of images if cell is scrolled off screen.
-   override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         let photoReference = photoReferences[indexPath.item]
         

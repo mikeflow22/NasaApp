@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54i-VM-n8P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,7 +108,6 @@
                                 <state key="normal" title="Curiosity"/>
                                 <connections>
                                     <action selector="roverNameButtonTapped:" destination="S65-M9-oYL" eventType="touchUpInside" id="QHy-Qx-RaR"/>
-                                    <segue destination="54i-VM-n8P" kind="show" id="Bug-17-dl4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0t-Ub-SCW">
@@ -118,7 +116,6 @@
                                 <state key="normal" title="Opportunity"/>
                                 <connections>
                                     <action selector="roverNameButtonTapped:" destination="S65-M9-oYL" eventType="touchUpInside" id="xmn-ii-hiw"/>
-                                    <segue destination="54i-VM-n8P" kind="show" id="eaU-w0-icV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GU-Ol-spB">
@@ -127,7 +124,6 @@
                                 <state key="normal" title="Spirit"/>
                                 <connections>
                                     <action selector="roverNameButtonTapped:" destination="S65-M9-oYL" eventType="touchUpInside" id="zDu-uk-dr3"/>
-                                    <segue destination="54i-VM-n8P" kind="show" id="Vje-gq-KHc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,6 +131,9 @@
                         <viewLayoutGuide key="safeArea" id="Vy7-Tb-bao"/>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Rover" id="SCV-4u-kBp"/>
+                    <connections>
+                        <segue destination="54i-VM-n8P" kind="show" identifier="buttonSegue" id="hgK-Np-foK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEY-AQ-wgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KHm-rC-nbD">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KHm-rC-nbD">
                             <size key="itemSize" width="150" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -158,7 +157,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="aGL-O7-sFo" customClass="ImageCollectionViewCell" customModule="NASA" customModuleProvider="target">
                                 <rect key="frame" x="8" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LhY-Yr-8vp">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -166,14 +165,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="1ud-Xc-jb6" firstAttribute="leading" secondItem="LhY-Yr-8vp" secondAttribute="leading" id="NI6-Fk-ayZ"/>
-                                        <constraint firstAttribute="bottom" secondItem="1ud-Xc-jb6" secondAttribute="bottom" id="Tai-Pe-jOc"/>
-                                        <constraint firstAttribute="trailing" secondItem="1ud-Xc-jb6" secondAttribute="trailing" id="U3g-x7-TCs"/>
-                                        <constraint firstItem="1ud-Xc-jb6" firstAttribute="top" secondItem="LhY-Yr-8vp" secondAttribute="top" id="pcH-o0-uZG"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="150" height="150"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="1ud-Xc-jb6" firstAttribute="leading" secondItem="aGL-O7-sFo" secondAttribute="leading" id="NI6-Fk-ayZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ud-Xc-jb6" secondAttribute="bottom" id="Tai-Pe-jOc"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ud-Xc-jb6" secondAttribute="trailing" id="U3g-x7-TCs"/>
+                                    <constraint firstItem="1ud-Xc-jb6" firstAttribute="top" secondItem="aGL-O7-sFo" secondAttribute="top" id="pcH-o0-uZG"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="photoImageView" destination="1ud-Xc-jb6" id="WxT-n5-Noo"/>
                                 </connections>
@@ -210,7 +208,4 @@
             <point key="canvasLocation" x="857" y="102"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Bug-17-dl4"/>
-    </inferredMetricsTieBreakers>
 </document>
