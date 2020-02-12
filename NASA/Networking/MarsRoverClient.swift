@@ -83,7 +83,7 @@ class MarsRoverClient {
         }
     }
     
-    func fetchEarthView(lon: Double, lat: Double, cloudScore: Bool, completion: @escaping(UIImage?) -> Void){
+    func fetchEarthView(lon: Double, lat: Double, completion: @escaping(UIImage?) -> Void){
         let baseURL = URL(string: "https://api.nasa.gov/planetary/earth/imagery")!
 //        let dateFormatter = ISO8601DateFormatter()
 //        dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -93,13 +93,13 @@ class MarsRoverClient {
        
         let date = Date()
         print(date)
-        let formattedDate = date.formatDate()
+        let formattedDate = date.turnDateIntoString()
      print("this is the date formatted: \(formattedDate)")
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = [URLQueryItem(name: "lon", value: "\(lon)"),
                                      URLQueryItem(name: "lat", value: "\(lat)"),
-                                     URLQueryItem(name: "date", value: "2020-01-01"),
-                                     URLQueryItem(name: "cloud_score", value: "\(cloudScore)"),
+                                     URLQueryItem(name: "date", value: formattedDate),
+                                     URLQueryItem(name: "cloud_score", value: "True"),
                                      URLQueryItem(name: "api_key", value: apiKey)]
         
         let finalURL = urlComponents.url!

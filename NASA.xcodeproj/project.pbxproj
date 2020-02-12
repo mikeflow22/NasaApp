@@ -60,6 +60,14 @@
 			path = Operations;
 			sourceTree = "<group>";
 		};
+		1B4C77F223F4550F00B1A785 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1B4C77F023F454BD00B1A785 /* URL+Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		1BCDB70C23F2FFD3005FDEF6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +93,7 @@
 				1BCDB73023F31AB7005FDEF6 /* Models */,
 				1BCDB73423F31AE5005FDEF6 /* Resources */,
 				1B4C77ED23F4544400B1A785 /* Operations */,
-				1B4C77F023F454BD00B1A785 /* URL+Extension.swift */,
+				1B4C77F223F4550F00B1A785 /* Helper */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
