@@ -11,11 +11,11 @@ import Foundation
 //MAIN MODEL
 struct MarsRover: Codable {
     let name: String
-    let launchDate: Date
-    let landingDate: Date
-    let maxSol: Int
-    let maxDate: Date
-    let numberOfPhotos: Int
+//    let launchDate: Date
+//    let landingDate: Date
+//    let maxSol: Int
+//    let maxDate: Date
+//    let numberOfPhotos: Int
     let solDescriptions: [SolDescription]
     
     //this is for the operations
@@ -27,12 +27,12 @@ struct MarsRover: Codable {
     //using coding keys to match numberOfPhotos to the api's documentation of totalPhotos and solDescriptions
     enum CodingKeys: String, CodingKey {
         case name
-        case launchDate
-        case landingDate
-        case status
-        case maxSol
-        case maxDate
-        case numberOfPhotos = "totalPhotos"
+//        case launchDate
+//        case landingDate
+//        case status
+//        case maxSol
+//        case maxDate
+//        case numberOfPhotos = "totalPhotos"
         case solDescriptions = "photos"
     }
     

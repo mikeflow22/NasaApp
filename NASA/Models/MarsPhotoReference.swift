@@ -18,7 +18,7 @@ struct MarsPhotoReference: Codable {
     enum CodingKeys: String, CodingKey, Codable {
         case id
         case sol
-        case camera
+//        case camera
         case earthDate
         case imageURL = "imgSrc"
     }
