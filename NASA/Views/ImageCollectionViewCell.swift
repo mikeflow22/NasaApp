@@ -11,4 +11,9 @@ import UIKit
 class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     
+    override func prepareForReuse() {
+        photoImageView.image = #imageLiteral(resourceName: "MarsPlaceholder")
+        
+        super.prepareForReuse()
+    }
 }

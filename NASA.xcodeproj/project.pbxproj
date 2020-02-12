@@ -115,8 +115,6 @@
 				1BCDB73423F31AE5005FDEF6 /* Resources */,
 				1B4C77ED23F4544400B1A785 /* Operations */,
 				1B4C77F223F4550F00B1A785 /* Helper */,
-				1B4C77F323F461F100B1A785 /* PictureOfTheDay.swift */,
-				1B4C77F523F4623400B1A785 /* POTDController.swift */,
 			);
 			path = NASA;
 			sourceTree = "<group>";
@@ -124,6 +122,7 @@
 		1BCDB73023F31AB7005FDEF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B4C77F323F461F100B1A785 /* PictureOfTheDay.swift */,
 				1BCDB73723F36E30005FDEF6 /* MarsPhotoReference.swift */,
 				1BCDB72E23F319E8005FDEF6 /* MarsRover.swift */,
 				1BCDB73523F31B55005FDEF6 /* SolDescription.swift */,
@@ -135,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCDB72C23F30D75005FDEF6 /* MarsRoverClient.swift */,
+				1B4C77F523F4623400B1A785 /* POTDController.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
