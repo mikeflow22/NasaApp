@@ -17,8 +17,7 @@ class EarthViewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func homeButtonTapped(_ sender: UIButton) {
-    }
+ 
 
     /*
     // MARK: - Navigation
