@@ -61,6 +61,4 @@ class RoverHomePageViewController: UIViewController {
             print("Error in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
         }
     }
-    
-    
 }

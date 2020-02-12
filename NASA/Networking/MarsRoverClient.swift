@@ -15,7 +15,7 @@ class MarsRoverClient {
     private func fetch<T: Codable>(from url: URL, using session: URLSession = URLSession.shared, completion: @escaping (T?, Error?) -> Void) {
         session.dataTask(with: url) { (data, response, error) in
             if let response = response as? HTTPURLResponse {
-                print("Response: \(response.statusCode)")
+                print("Response in the fetch(url:using:completion): \(response.statusCode)")
             }
             
             if let error = error {
@@ -132,21 +132,5 @@ class MarsRoverClient {
         }.resume()
     }
 }
-extension Date {
-    func formatDate() -> String {
-        let formatter  = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        formatter.timeStyle = .none
-        return formatter.string(from: self)
-    }
-}
 
-extension Date {
-    func turnDateIntoString() -> String {
-        let dateformatter = DateFormatter()
-        dateformatter.timeStyle = .none
-        dateformatter.dateStyle = .none
-        dateformatter.dateFormat = "yyyy-MM-dd"
-        return dateformatter.string(from: self)
-    }
-}
+

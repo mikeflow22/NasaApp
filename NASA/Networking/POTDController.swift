@@ -16,7 +16,7 @@ class POTDController {
         
         URLSession.shared.dataTask(with: url) { (date, response, error) in
             if let response = response as? HTTPURLResponse {
-                print("Response: \(response.statusCode)")
+                print("Response in fetchPOTDImageURL(completion): \(response.statusCode)")
             }
             
             if let error = error {
@@ -46,7 +46,7 @@ class POTDController {
     func fetchImage(url: URL, completion: @escaping(UIImage?, Error?) -> Void){
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let response = response as? HTTPURLResponse {
-                print("Response: \(response.statusCode)")
+                print("Response in fetchImage(url:completion): \(response.statusCode)")
             }
             if let error = error {
                 print("Error in file: \(#file) in the body of the function: \(#function)\n on line: \(#line)\n Readable Error: \(error.localizedDescription)\n Technical Error: \(error)\n")
