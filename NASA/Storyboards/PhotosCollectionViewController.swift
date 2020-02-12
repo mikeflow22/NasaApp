@@ -109,7 +109,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         let photoReference = photoReferences[indexPath.item]
         
         if let image = cache.value(for: photoReference.id) {
-            cell.imageView.image = image
+            cell.photoImageView.image = image
             return
         } else {
             

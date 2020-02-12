@@ -15,7 +15,7 @@ struct MarsPhotoReference: Codable {
     let earthDate: Date
     let imageURL: URL
     
-    enum CodingKeys: String, CodingKey, Codable {
+    enum CodingKeys: String, CodingKey {
         case id
         case sol
 //        case camera
@@ -27,6 +27,7 @@ struct MarsPhotoReference: Codable {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.timeZone = TimeZone(abbreviation: "GMT")
+        formatter.dateStyle = .none
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()

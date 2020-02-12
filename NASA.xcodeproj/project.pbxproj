@@ -115,9 +115,9 @@
 				1BCDB73323F31AD3005FDEF6 /* View Controllers */,
 				1BCDB73123F31AC1005FDEF6 /* Networking */,
 				1BCDB73023F31AB7005FDEF6 /* Models */,
-				1BCDB73423F31AE5005FDEF6 /* Resources */,
 				1B4C77ED23F4544400B1A785 /* Operations */,
 				1B4C77F223F4550F00B1A785 /* Helper */,
+				1BCDB73423F31AE5005FDEF6 /* Resources */,
 			);
 			path = NASA;
 			sourceTree = "<group>";

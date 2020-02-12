@@ -23,6 +23,5 @@ class Cache<Key: Hashable, Value> {
     }
     
     private var cachedItems: [Key : Value] = [:]
-    
     private let queue = DispatchQueue(label: "com.MosesRobinson.Astronomy.CacheQueue")
 }
