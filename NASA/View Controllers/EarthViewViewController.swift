@@ -1,5 +1,5 @@
 //
-//  RoverHomePageViewController.swift
+//  EarthViewViewController.swift
 //  NASA
 //
 //  Created by Michael Flowers on 2/12/20.
@@ -8,17 +8,18 @@
 
 import UIKit
 
-class RoverHomePageViewController: UIViewController {
+class EarthViewViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    //use tags to determine which one was tapped - might have to drag all three to this link
-    @IBAction func roverNameButtonTapped(_ sender: UIButton) {
-    }
     
+    @IBAction func homeButtonTapped(_ sender: UIButton) {
+    }
+
     /*
     // MARK: - Navigation
 

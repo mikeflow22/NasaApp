@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Earth View View Controller-->
         <scene sceneID="z9t-BN-Og5">
             <objects>
-                <viewController id="Lgx-Sy-yRo" sceneMemberID="viewController">
+                <viewController id="Lgx-Sy-yRo" customClass="EarthViewViewController" customModule="NASA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IiN-ZM-12u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,11 +74,22 @@
                                 <rect key="frame" x="0.0" y="212" width="414" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJY-D1-PCW">
+                                <rect key="frame" x="23" y="729" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="Lgx-Sy-yRo" eventType="touchUpInside" id="VQ7-dV-rRN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9cb-tt-PYw"/>
                     </view>
                     <navigationItem key="navigationItem" id="snS-J9-rh7"/>
+                    <connections>
+                        <outlet property="imageView" destination="iEh-6U-pOr" id="9jc-Nm-hvo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvP-fl-hY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Opportunity"/>
                                 <connections>
+                                    <action selector="roverNameButtonTapped:" destination="S65-M9-oYL" eventType="touchUpInside" id="xmn-ii-hiw"/>
                                     <segue destination="54i-VM-n8P" kind="show" id="eaU-w0-icV"/>
                                 </connections>
                             </button>
@@ -114,6 +126,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Spirit"/>
                                 <connections>
+                                    <action selector="roverNameButtonTapped:" destination="S65-M9-oYL" eventType="touchUpInside" id="zDu-uk-dr3"/>
                                     <segue destination="54i-VM-n8P" kind="show" id="Vje-gq-KHc"/>
                                 </connections>
                             </button>
@@ -161,6 +174,9 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="150"/>
+                                <connections>
+                                    <outlet property="photoImageView" destination="1ud-Xc-jb6" id="WxT-n5-Noo"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
